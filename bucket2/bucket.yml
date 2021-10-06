@@ -1,0 +1,5 @@
+flows:
+  7110716e-be86-4f72-b2ab-89ec311c0499: {ver: 1, file: SFTPTOS3.snapshot, comments: SFTPTOS3,
+    author: anonymous, created: 1633525649762, flowName: SFTPTOS3, flowDesc: SFTPTOS3}
+layoutVer: 1
+bucketId: 9565c702-a564-40e9-8a7d-d89e3377af76
