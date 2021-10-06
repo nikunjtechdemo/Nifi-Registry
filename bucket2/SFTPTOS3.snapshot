@@ -259,7 +259,7 @@
           "prioritizers" : [ ],
           "selectedRelationships" : [ "success" ],
           "source" : {
-            "comments" : "",
+            "comments" : "list ftp",
             "groupId" : "d6bf0e2d-ed33-3a16-a865-717cf695e377",
             "id" : "3942ad8f-ee40-3d1e-8555-3d30b10a6d35",
             "name" : "ListSFTP",
@@ -1191,7 +1191,7 @@
             "group" : "org.apache.nifi",
             "version" : "1.14.0"
           },
-          "comments" : "",
+          "comments" : "list ftp",
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "PRIMARY",
