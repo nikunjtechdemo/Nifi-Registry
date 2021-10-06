@@ -1,0 +1,541 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "externalControllerServices" : {
+        "8c8b1008-9c17-33c4-8c40-f736d970ead0" : {
+          "identifier" : "8c8b1008-9c17-33c4-8c40-f736d970ead0",
+          "name" : "DBCPConnectionPool"
+        },
+        "28ed0a99-6fa4-3254-a0d8-8fe980a869f1" : {
+          "identifier" : "28ed0a99-6fa4-3254-a0d8-8fe980a869f1",
+          "name" : "CSVRecordSetWriter"
+        }
+      },
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+            "id" : "c4d5e535-e4d0-3c42-a13a-ccc2b5679806",
+            "name" : "Wait",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "0ccea138-3acd-31d1-aa17-c512f50c57df",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+            "id" : "ee1d9e7e-2186-3899-8635-0fff31cb1b1f",
+            "name" : "ExecuteSQLRecord",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+            "id" : "c4d5e535-e4d0-3c42-a13a-ccc2b5679806",
+            "name" : "Wait",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "d0bec0ef-ae92-3eaa-915c-cd95e840ea6d",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+            "id" : "f406ccf3-6edd-352f-be30-72ee49655445",
+            "name" : "CaptureChangeMySQL",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "1 GB",
+          "backPressureObjectThreshold" : 10000,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+            "id" : "ee1d9e7e-2186-3899-8635-0fff31cb1b1f",
+            "name" : "ExecuteSQLRecord",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "dbf2494c-3b22-3ac9-a8b3-267e9e827e53",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "partitioningAttribute" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+            "id" : "9c49f1e0-f78d-39bf-86cf-80bf658a6e44",
+            "name" : "ConnectSQL",
+            "type" : "INPUT_PORT"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "defaultBackPressureDataSizeThreshold" : "1 GB",
+        "defaultBackPressureObjectThreshold" : 10000,
+        "defaultFlowFileExpiration" : "0 sec",
+        "flowFileConcurrency" : "UNBOUNDED",
+        "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+        "funnels" : [ ],
+        "identifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+        "inputPorts" : [ {
+          "allowRemoteAccess" : false,
+          "comments" : "",
+          "componentType" : "INPUT_PORT",
+          "concurrentlySchedulableTaskCount" : 1,
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "9c49f1e0-f78d-39bf-86cf-80bf658a6e44",
+          "name" : "ConnectSQL",
+          "position" : {
+            "x" : 192.0,
+            "y" : 136.0
+          },
+          "type" : "INPUT_PORT"
+        } ],
+        "labels" : [ ],
+        "name" : "ConnectMySQL",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 2008.0,
+          "y" : -104.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.14.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "ee1d9e7e-2186-3899-8635-0fff31cb1b1f",
+          "name" : "ExecuteSQLRecord",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 392.0,
+            "y" : 320.0
+          },
+          "properties" : {
+            "esql-max-rows" : "0",
+            "esqlrecord-record-writer" : "28ed0a99-6fa4-3254-a0d8-8fe980a869f1",
+            "dbf-default-precision" : "10",
+            "Max Wait Time" : "0 seconds",
+            "Database Connection Pooling Service" : "8c8b1008-9c17-33c4-8c40-f736d970ead0",
+            "dbf-user-logical-types" : "false",
+            "dbf-default-scale" : "0",
+            "sql-pre-query" : "use MySQL_Test;",
+            "esql-output-batch-size" : "0",
+            "esql-fetch-size" : "0",
+            "SQL select query" : "select * from nifitest;",
+            "esqlrecord-normalize" : "false"
+          },
+          "propertyDescriptors" : {
+            "esql-max-rows" : {
+              "displayName" : "Max Rows Per Flow File",
+              "identifiesControllerService" : false,
+              "name" : "esql-max-rows",
+              "sensitive" : false
+            },
+            "esqlrecord-record-writer" : {
+              "displayName" : "Record Writer",
+              "identifiesControllerService" : true,
+              "name" : "esqlrecord-record-writer",
+              "sensitive" : false
+            },
+            "dbf-default-precision" : {
+              "displayName" : "Default Decimal Precision",
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-precision",
+              "sensitive" : false
+            },
+            "Max Wait Time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "Max Wait Time",
+              "sensitive" : false
+            },
+            "Database Connection Pooling Service" : {
+              "displayName" : "Database Connection Pooling Service",
+              "identifiesControllerService" : true,
+              "name" : "Database Connection Pooling Service",
+              "sensitive" : false
+            },
+            "sql-post-query" : {
+              "displayName" : "SQL Post-Query",
+              "identifiesControllerService" : false,
+              "name" : "sql-post-query",
+              "sensitive" : false
+            },
+            "dbf-user-logical-types" : {
+              "displayName" : "Use Avro Logical Types",
+              "identifiesControllerService" : false,
+              "name" : "dbf-user-logical-types",
+              "sensitive" : false
+            },
+            "dbf-default-scale" : {
+              "displayName" : "Default Decimal Scale",
+              "identifiesControllerService" : false,
+              "name" : "dbf-default-scale",
+              "sensitive" : false
+            },
+            "sql-pre-query" : {
+              "displayName" : "SQL Pre-Query",
+              "identifiesControllerService" : false,
+              "name" : "sql-pre-query",
+              "sensitive" : false
+            },
+            "esql-output-batch-size" : {
+              "displayName" : "Output Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "esql-output-batch-size",
+              "sensitive" : false
+            },
+            "esql-fetch-size" : {
+              "displayName" : "Fetch Size",
+              "identifiesControllerService" : false,
+              "name" : "esql-fetch-size",
+              "sensitive" : false
+            },
+            "SQL select query" : {
+              "displayName" : "SQL select query",
+              "identifiesControllerService" : false,
+              "name" : "SQL select query",
+              "sensitive" : false
+            },
+            "esqlrecord-normalize" : {
+              "displayName" : "Normalize Table/Column Names",
+              "identifiesControllerService" : false,
+              "name" : "esqlrecord-normalize",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-cdc-mysql-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.14.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "PRIMARY",
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "f406ccf3-6edd-352f-be30-72ee49655445",
+          "name" : "CaptureChangeMySQL",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 456.0,
+            "y" : 24.0
+          },
+          "properties" : {
+            "capture-change-mysql-include-ddl-events" : "false",
+            "capture-change-mysql-db-name-pattern" : "MySQL_Test",
+            "capture-change-mysql-name-pattern" : "nifitest",
+            "capture-change-mysql-driver-class" : "com.mysql.jdbc.Driver",
+            "capture-change-mysql-driver-locations" : "/Users/nikunjkumarpatel/Downloads/mysql-connector-java-8.0.26",
+            "SSL Mode" : "DISABLED",
+            "capture-change-mysql-include-begin-commit" : "false",
+            "capture-change-mysql-hosts" : "127.0.0.1:3306",
+            "capture-change-mysql-username" : "root",
+            "capture-change-mysql-retrieve-all-records" : "true",
+            "capture-change-mysql-state-update-interval" : "0 seconds",
+            "capture-change-mysql-use-gtid" : "false",
+            "capture-change-mysql-max-wait-time" : "30 seconds"
+          },
+          "propertyDescriptors" : {
+            "capture-change-mysql-include-ddl-events" : {
+              "displayName" : "Include DDL Events",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-include-ddl-events",
+              "sensitive" : false
+            },
+            "capture-change-mysql-db-name-pattern" : {
+              "displayName" : "Database/Schema Name Pattern",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-db-name-pattern",
+              "sensitive" : false
+            },
+            "capture-change-mysql-dist-map-cache-client" : {
+              "displayName" : "Distributed Map Cache Client",
+              "identifiesControllerService" : true,
+              "name" : "capture-change-mysql-dist-map-cache-client",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-seq-id" : {
+              "displayName" : "Initial Sequence ID",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-seq-id",
+              "sensitive" : false
+            },
+            "capture-change-mysql-name-pattern" : {
+              "displayName" : "Table Name Pattern",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-name-pattern",
+              "sensitive" : false
+            },
+            "capture-change-mysql-driver-class" : {
+              "displayName" : "MySQL Driver Class Name",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-driver-class",
+              "sensitive" : false
+            },
+            "capture-change-mysql-driver-locations" : {
+              "displayName" : "MySQL Driver Location(s)",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-driver-locations",
+              "resourceDefinition" : {
+                "cardinality" : "MULTIPLE",
+                "resourceTypes" : [ "URL", "DIRECTORY", "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "SSL Mode" : {
+              "displayName" : "SSL Mode",
+              "identifiesControllerService" : false,
+              "name" : "SSL Mode",
+              "sensitive" : false
+            },
+            "capture-change-mysql-include-begin-commit" : {
+              "displayName" : "Include Begin/Commit Events",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-include-begin-commit",
+              "sensitive" : false
+            },
+            "capture-change-mysql-server-id" : {
+              "displayName" : "Server ID",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-server-id",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-binlog-filename" : {
+              "displayName" : "Initial Binlog Filename",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-binlog-filename",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-binlog-position" : {
+              "displayName" : "Initial Binlog Position",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-binlog-position",
+              "sensitive" : false
+            },
+            "capture-change-mysql-init-gtid" : {
+              "displayName" : "Initial Binlog GTID",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-init-gtid",
+              "sensitive" : false
+            },
+            "capture-change-mysql-hosts" : {
+              "displayName" : "MySQL Hosts",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-hosts",
+              "sensitive" : false
+            },
+            "capture-change-mysql-username" : {
+              "displayName" : "Username",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-username",
+              "sensitive" : false
+            },
+            "capture-change-mysql-retrieve-all-records" : {
+              "displayName" : "Retrieve All Records",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-retrieve-all-records",
+              "sensitive" : false
+            },
+            "SSL Context Service" : {
+              "displayName" : "SSL Context Service",
+              "identifiesControllerService" : true,
+              "name" : "SSL Context Service",
+              "sensitive" : false
+            },
+            "capture-change-mysql-state-update-interval" : {
+              "displayName" : "State Update Interval",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-state-update-interval",
+              "sensitive" : false
+            },
+            "capture-change-mysql-use-gtid" : {
+              "displayName" : "Use Binlog GTID",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-use-gtid",
+              "sensitive" : false
+            },
+            "capture-change-mysql-password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-password",
+              "sensitive" : true
+            },
+            "capture-change-mysql-max-wait-time" : {
+              "displayName" : "Max Wait Time",
+              "identifiesControllerService" : false,
+              "name" : "capture-change-mysql-max-wait-time",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.cdc.mysql.processors.CaptureChangeMySQL",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.14.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "5c0dc06d-de2f-39dd-a15e-d169a8bc345b",
+          "identifier" : "c4d5e535-e4d0-3c42-a13a-ccc2b5679806",
+          "name" : "Wait",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1112.0,
+            "y" : 56.0
+          },
+          "properties" : {
+            "wait-buffer-count" : "1",
+            "wait-mode" : "wait",
+            "attribute-copy-mode" : "keeporiginal",
+            "releasable-flowfile-count" : "1",
+            "expiration-duration" : "10 min",
+            "target-signal-count" : "1"
+          },
+          "propertyDescriptors" : {
+            "wait-buffer-count" : {
+              "displayName" : "Wait Buffer Count",
+              "identifiesControllerService" : false,
+              "name" : "wait-buffer-count",
+              "sensitive" : false
+            },
+            "wait-mode" : {
+              "displayName" : "Wait Mode",
+              "identifiesControllerService" : false,
+              "name" : "wait-mode",
+              "sensitive" : false
+            },
+            "attribute-copy-mode" : {
+              "displayName" : "Attribute Copy Mode",
+              "identifiesControllerService" : false,
+              "name" : "attribute-copy-mode",
+              "sensitive" : false
+            },
+            "distributed-cache-service" : {
+              "displayName" : "Distributed Cache Service",
+              "identifiesControllerService" : true,
+              "name" : "distributed-cache-service",
+              "sensitive" : false
+            },
+            "releasable-flowfile-count" : {
+              "displayName" : "Releasable FlowFile Count",
+              "identifiesControllerService" : false,
+              "name" : "releasable-flowfile-count",
+              "sensitive" : false
+            },
+            "release-signal-id" : {
+              "displayName" : "Release Signal Identifier",
+              "identifiesControllerService" : false,
+              "name" : "release-signal-id",
+              "sensitive" : false
+            },
+            "signal-counter-name" : {
+              "displayName" : "Signal Counter Name",
+              "identifiesControllerService" : false,
+              "name" : "signal-counter-name",
+              "sensitive" : false
+            },
+            "expiration-duration" : {
+              "displayName" : "Expiration Duration",
+              "identifiesControllerService" : false,
+              "name" : "expiration-duration",
+              "sensitive" : false
+            },
+            "target-signal-count" : {
+              "displayName" : "Target Signal Count",
+              "identifiesControllerService" : false,
+              "name" : "target-signal-count",
+              "sensitive" : false
+            },
+            "wait-penalty-duration" : {
+              "displayName" : "Wait Penalty Duration",
+              "identifiesControllerService" : false,
+              "name" : "wait-penalty-duration",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.Wait",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      },
+      "flowEncodingVersion" : "1.0",
+      "parameterContexts" : { }
+    }
+  }
+}
