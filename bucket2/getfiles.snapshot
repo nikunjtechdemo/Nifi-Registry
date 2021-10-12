@@ -6,7 +6,7 @@
     "flowSnapshot" : {
       "externalControllerServices" : { },
       "flowContents" : {
-        "comments" : "",
+        "comments" : "This is for testing purpose",
         "componentType" : "PROCESS_GROUP",
         "connections" : [ {
           "backPressureDataSizeThreshold" : "1 GB",
@@ -15,13 +15,13 @@
           "componentType" : "CONNECTION",
           "destination" : {
             "comments" : "",
-            "groupId" : "55d14d30-6149-3702-91a8-58c107fe6e80",
+            "groupId" : "78d4ca4d-07d4-30d9-94f0-c08c6edd2f47",
             "id" : "9927d689-a487-372f-a9f7-cd9af1d8ba96",
             "name" : "Wait",
             "type" : "PROCESSOR"
           },
           "flowFileExpiration" : "0 sec",
-          "groupIdentifier" : "55d14d30-6149-3702-91a8-58c107fe6e80",
+          "groupIdentifier" : "78d4ca4d-07d4-30d9-94f0-c08c6edd2f47",
           "identifier" : "926de850-bc4c-3c97-85f0-e77da4b41261",
           "labelIndex" : 1,
           "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -32,7 +32,7 @@
           "selectedRelationships" : [ "success" ],
           "source" : {
             "comments" : "",
-            "groupId" : "55d14d30-6149-3702-91a8-58c107fe6e80",
+            "groupId" : "78d4ca4d-07d4-30d9-94f0-c08c6edd2f47",
             "id" : "056491e3-c618-3dce-8d8b-5104b9f8c8fc",
             "name" : "GenerateFlowFile",
             "type" : "PROCESSOR"
@@ -46,14 +46,14 @@
         "flowFileConcurrency" : "UNBOUNDED",
         "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
         "funnels" : [ ],
-        "identifier" : "55d14d30-6149-3702-91a8-58c107fe6e80",
+        "identifier" : "78d4ca4d-07d4-30d9-94f0-c08c6edd2f47",
         "inputPorts" : [ ],
         "labels" : [ ],
         "name" : "GETFiles",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 1707.2366071428573,
-          "y" : 420.58482142857144
+          "x" : 517.0,
+          "y" : 110.0
         },
         "processGroups" : [ ],
         "processors" : [ {
@@ -68,7 +68,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "55d14d30-6149-3702-91a8-58c107fe6e80",
+          "groupIdentifier" : "78d4ca4d-07d4-30d9-94f0-c08c6edd2f47",
           "identifier" : "9927d689-a487-372f-a9f7-cd9af1d8ba96",
           "name" : "Wait",
           "penaltyDuration" : "30 sec",
@@ -165,7 +165,7 @@
           "componentType" : "PROCESSOR",
           "concurrentlySchedulableTaskCount" : 1,
           "executionNode" : "ALL",
-          "groupIdentifier" : "55d14d30-6149-3702-91a8-58c107fe6e80",
+          "groupIdentifier" : "78d4ca4d-07d4-30d9-94f0-c08c6edd2f47",
           "identifier" : "056491e3-c618-3dce-8d8b-5104b9f8c8fc",
           "name" : "GenerateFlowFile",
           "penaltyDuration" : "30 sec",
